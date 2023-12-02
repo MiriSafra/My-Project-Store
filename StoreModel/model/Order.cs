@@ -15,7 +15,8 @@ namespace StoreModel.Model
         [Required]
         public int OrdereId { get; set; }
         public Customer customer { get; set; }
-        List<ProductInOrder> Products;      
+        List<ProductInOrder> Products;
+        [Column(TypeName = "date"), DisplayFormat(DataFormatString = "{0:dd/mm/yyyy ")]
         public DateTime DateOrder { get; set; }
         public int Cost()
         {

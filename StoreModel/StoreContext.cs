@@ -9,19 +9,19 @@ using System.Threading.Tasks;
 
 namespace StoreModel
 {
-    internal class StoreContext : DbContext
+    public class StoreContext : DbContext
     {
 
-            public StoreContext(DbContextOptions<StoreContext> options) : base(options)
-            {
+        public StoreContext(DbContextOptions<StoreContext> options) : base(options)
+        {
 
-            }
+        }
 
-            public DbSet<Customer> Customer { get; set; }
-            public DbSet<Order> Order { get; set; }
+        public DbSet<Customer> Customer { get; set; }
+        public DbSet<Order> Order { get; set; }
         public DbSet<Product> Product { get; set; }
         public DbSet<ProductInOrder> ProductInOrder { get; set; }
 
-        
+
     }
 }

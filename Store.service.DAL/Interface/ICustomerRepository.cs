@@ -9,7 +9,11 @@ namespace Store.service.DAL
 {
     public interface ICustomerRepository
     {
+        bool AddCustomer(Customer customer);
         List<Customer> GetAll();
-        void Add(Customer customer);
+        //void Add(Customer customer);
+        Customer GetCustomer(string Name);
+        bool RemoveCustomer(string Name);
+
     }
 }

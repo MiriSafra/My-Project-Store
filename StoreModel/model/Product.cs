@@ -9,6 +9,8 @@ namespace StoreModel.Model
         [Key]
         [Required]
         public int ProdId { get; set; }//מספר מזהה
+        [MaxLength(25)]
+        [MinLength(2)]
         public string Name { get; set; }//שם מוצר
         public int Price { get; set; }//מחיר קניה
         public int Cost { get; set; }//מחיר מכירה

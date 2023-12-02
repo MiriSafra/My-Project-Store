@@ -14,8 +14,12 @@ namespace StoreModel.Model
         [Key]
         [Required]
         public int CustId { get; set; }
+        [MaxLength(25)]
+        [MinLength(2)]
         public string Name { get; set; }
         public string Adress { get; set; }
+        //[RegularExpression("^(0(\\d ?){9})", ErrorMessage = "Invalid Phone Number")]
         public string PhoneNumber { get; set; }
+        //public ICollection<Order> Orders { get; set; }
     }
 }

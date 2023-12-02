@@ -9,7 +9,9 @@ namespace Store.service.BL
 {
     public interface ICustomerService
     {
-        List<Customer> GetAll();
-        void Add( int CustId, string CustomerName, string Adress, string PhoneNumber);
+        bool? AddCustomer(Customer customer);
+        public List<Customer> GetAll();
+        bool RemoveCustomer(string Name);
+        Customer GetCustomer(string Name);
     }
 }
